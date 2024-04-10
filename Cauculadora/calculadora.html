@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .changeBackground{
+            height: 100vh;
+            width: 100vw;
+            background-image: linear-gradient(45deg, #000, #8787E9);
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #calculator{
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 15px;
+            padding: 15px;
+        }
+        #calcTitle{
+            margin-bottom: 16px;
+        }
+        button{
+            height: 50px;
+            width: 50px;
+            background-color: #313131;
+            cursor: pointer;
+            border: none;
+            font-size: 1.5rem;
+            color: #fff;
+            margin: 3px;
+            border-radius: 15px;
+        }
+        button:hover{
+            background-color: #000;
+        }
+        #result{
+            background-color: #fff;
+            margin: 4px 5px;
+            height: 40px;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: end;
+            align-items: end;
+            border-radius: 7px;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="changeBackground">
+        <div id="calculator">
+            <h1 id="calcTitle">Calculadora</h1>
+            <p id="result">Resultado</p>
+            <table>
+                <tr>
+                    <td><button>C</button></td>
+                    <td><button><</button></td>
+                    <td><button>/</button></td>
+                    <td><button>x</button></td>
+                </tr>
+                <tr>
+                    <td><button>7</button></td>
+                    <td><button>8</button></td>
+                    <td><button>9</button></td>
+                    <td><button>-</button></td>
+                </tr>
+                <tr>
+                    <td><button>4</button></td>
+                    <td><button>5</button></td>
+                    <td><button>6</button></td>
+                    <td><button>+</button></td>
+                </tr>
+                <tr>
+                    <td><button>1</button></td>
+                    <td><button>2</button></td>
+                    <td><button>3</button></td>
+                    <td rowspan="2"><button style="height: 108px;">=</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button style="width: 108px;">0</button></td>
+                    <td><button>.</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
