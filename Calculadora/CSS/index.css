@@ -4,42 +4,41 @@
     box-sizing: border-box;
 }
 
+:root{
+    --color60: #0065F4;
+    --color30: #313131;
+    --color10: #FF7700;
+}
+
 .changeBackground{
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(45deg, #000, #8787E9);
-    color: #fff;
+    background-image: linear-gradient(135deg, var(--color60), #070707);
+    color: var(--color10);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 #calculator{
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-image: linear-gradient(135deg, var(--color30), #070707);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 15px;
     padding: 15px;
-}
-#calcTitle{
-    margin-bottom: 16px;
-}
-button{
-    height: 50px;
-    width: 50px;
-    background-color: #313131;
-    cursor: pointer;
-    border: none;
-    font-size: 1.5rem;
-    color: #fff;
-    margin: 3px;
+    
+    box-shadow: 2px 2px 6px #000, -2px -2px 6px var(--color10);
     border-radius: 15px;
-
-    transition: .2s;
 }
-button:hover{
-    background-color: #000;
+
+#calcTitle{
+    filter: drop-shadow(1px 1px 5px);
+}
+
+a{
+    font-size: 0.9rem;
+    color: var(--color10);
+    filter: drop-shadow(1px 1px 5px);
 }
 
 #backOfResult {
@@ -49,13 +48,38 @@ button:hover{
     border-radius: 7px;
     width: 100%;
     height: 40px;
+    box-shadow: 2px 2px 5px #000, -1px -1px 2px var(--color10);
+    margin-top: 16px;
 }
-
 
 #result{
     margin: 4px 5px;
-    color: rgba(0, 0, 0, 0.8);
+    color: #000;
     font-size: 1.5rem;
+}
+
+#buttonsConteiner{
+    margin-top: 16px;
+}
+
+button{
+    height: 50px;
+    width: 50px;
+    background-color: #313131;
+    cursor: pointer;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--color10);
+    margin: 3px;
+    border-radius: 15px;
+
+    box-shadow: 1px 1px 4px #000, -1px -1px 2px var(--color10);
+    transition: .2s;
+}
+button:hover{
+    background-color: #080808;
+    color: var(--color60);
+    box-shadow: 1px 1px 4px #000, -1px -1px 2px var(--color60)
 }
 
 #btEqual{
@@ -64,4 +88,59 @@ button:hover{
 
 #btN0{
     width: 108px;
+}
+
+@media screen and (max-width: 768px) {
+
+    *{
+        max-width: 100%;
+    }
+
+    .changeBackground{
+        padding: 0;
+        margin: 0;
+    }
+
+    #backOfResult {
+        display: flex;
+        justify-content: end;
+        background-color: #fff;
+        border-radius: 7px;
+        width: 100%;
+        height: 60px;
+        box-shadow: 2px 2px 5px #000, -1px -1px 2px var(--color10);
+        margin-top: 16px;
+    }
+
+    #result{
+        margin: 4px 5px;
+        color: #000;
+        font-size: 2.5rem;
+    }
+
+    #buttonsConteiner{
+        max-width: 100%;
+        max-height: 100%;
+        width: 100%;
+        height: 80%;
+    }
+    button{
+        width: 80%;
+        height: 80%;
+    }
+
+    #calculator{
+        width: 95%;
+        height: 95%;
+        margin: 0;
+        position: relative;
+    }
+
+    #btEqual{
+        height: 90%;
+    }
+    
+    #btN0{
+        width: 90%;
+
 }
